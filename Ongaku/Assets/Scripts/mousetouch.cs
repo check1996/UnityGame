@@ -10,6 +10,7 @@ using UnityEngine.UI;
 public class mousetouch: MonoBehaviour {
 
     private ModalPanel modalPanel;
+
     private UnityAction waterYesAction;
     private UnityAction waterNoAction;
     private UnityAction waterCancelAction;
@@ -113,6 +114,12 @@ public class mousetouch: MonoBehaviour {
     private AudioClip woodsound4;
     private AudioSource source { get { return GetComponent<AudioSource>(); } }
 
+
+    private static GameObject sceneCam;
+    public float strength = 0.5f;
+
+
+
    
     void Start()
     {
@@ -137,6 +144,9 @@ public class mousetouch: MonoBehaviour {
         gameObject.AddComponent<AudioSource>();
         //source.playOnAwake = false;
 
+        sceneCam = GameObject.Find("Main Camera");
+
+
 
     }
 
@@ -151,23 +161,28 @@ public class mousetouch: MonoBehaviour {
             {
                 if (hit.transform.name == "Water")
                 {
+                    moveCamPos(2, 1, -13);
                     modalPanel.Choice("Flavor text", waterYesAction, waterNoAction, waterCancelAction, waterLastAction);
                 }
                 if (hit.transform.name == "Wood")
                 {
-                   modalPanel.Choice("Flavor text", woodYesAction, woodNoAction, woodCancelAction, woodLastAction);
+                    moveCamPos(14, 1, -4);
+                    modalPanel.Choice("Flavor text", woodYesAction, woodNoAction, woodCancelAction, woodLastAction);
                 }
                 if (hit.transform.name == "Iron")
                 {
+                    moveCamPos(-1, 1, 6);
                     //modalPanel.Choice("Flavor text", myYesAction, myNoAction, myCancelAction, myLastAction);
                 }
                 if (hit.transform.name == "Earth")
                 {
-                   // modalPanel.Choice("Flavor text", myYesAction, myNoAction, myCancelAction, myLastAction);
+                    moveCamPos(-7, 1, -4);
+                    // modalPanel.Choice("Flavor text", myYesAction, myNoAction, myCancelAction, myLastAction);
                 }
                 if (hit.transform.name == "Fire")
                 {
-                   // modalPanel.Choice("Flavor text", myYesAction, myNoAction, myCancelAction, myLastAction);
+                    moveCamPos(7, 1, 6);
+                    // modalPanel.Choice("Flavor text", myYesAction, myNoAction, myCancelAction, myLastAction);
                 }
             }
         }
@@ -300,6 +315,7 @@ public class mousetouch: MonoBehaviour {
         }
 
 
+
     }
     public void woodactioncreated()
     {
@@ -308,4 +324,14 @@ public class mousetouch: MonoBehaviour {
         woodCancelAction = new UnityAction(woodplayNote3);
         woodLastAction = new UnityAction(woodplayNote4);
     }
+
+    public void moveCamPos(float x, float y, float z)
+    {
+        Debug.Log("Null not here");
+        Vector3 cameraPosition = new Vector3(x, y, z);
+        sceneCam.transform.position = cameraPosition;
+            //Vector3.Lerp(transform.position, cameraPosition, strength);
+    }
+
+
 }

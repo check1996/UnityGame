@@ -6,6 +6,7 @@
 /Assets/AssetStoreTools*
 coolstuff.unity
 **/Library
+**/Server
 # Visual Studio 2015 cache directory
 /.vs/
 
@@ -37,3 +38,4 @@ sysinfo.txt
 
 Ongaku/Library/metadata/00/00000000000000002000000000000000
 Ongaku/Library/metadata/00/00000000000000006000000000000000
+*.ide
