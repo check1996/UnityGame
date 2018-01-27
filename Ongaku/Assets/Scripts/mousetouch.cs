@@ -8,6 +8,10 @@ using UnityEngine.UI;
 public class mousetouch: MonoBehaviour {
 
     private ModalPanel modalPanel;
+
+    private static GameObject sceneCam;
+    public float strength = 0.5f;
+
     private UnityAction myYesAction;
     private UnityAction myNoAction;
     private UnityAction myCancelAction;
@@ -17,6 +21,8 @@ public class mousetouch: MonoBehaviour {
     void Start()
     {
         modalPanel = ModalPanel.Instance();
+
+        sceneCam = GameObject.Find("Main Camera");
 
         myYesAction = new UnityAction(playNote1);
         myNoAction = new UnityAction(playNote2);
@@ -36,28 +42,28 @@ public class mousetouch: MonoBehaviour {
             {
                 if (hit.transform.name == "Water")
                 {
+                    moveCamPos(2, 1, -13);
                     modalPanel.Choice("Flavor text", myYesAction, myNoAction, myCancelAction, myLastAction);
-                    Debug.Log("yeah yeah yeah");
                 }
                 if (hit.transform.name == "Wood")
                 {
-                    //tester.TestYNCL();
-                    Debug.Log("yeah yeah yeah");
+                    moveCamPos(14, 1, -4);
+                    modalPanel.Choice("Flavor text", myYesAction, myNoAction, myCancelAction, myLastAction);
                 }
                 if (hit.transform.name == "Iron")
                 {
-                    //tester.TestYNCL();
-                    Debug.Log("yeah yeah yeah");
+                    moveCamPos(-1, 1, 6);
+                    modalPanel.Choice("Flavor text", myYesAction, myNoAction, myCancelAction, myLastAction);
                 }
                 if (hit.transform.name == "Earth")
                 {
-                    //tester.TestYNCL();
-                    Debug.Log("yeah yeah yeah");
+                    moveCamPos(-7, 1, -4);
+                    modalPanel.Choice("Flavor text", myYesAction, myNoAction, myCancelAction, myLastAction);
                 }
                 if (hit.transform.name == "Fire")
                 {
-                    //tester.TestYNCL();
-                    Debug.Log("yeah yeah yeah");
+                    moveCamPos(7, 1, 6);
+                    modalPanel.Choice("Flavor text", myYesAction, myNoAction, myCancelAction, myLastAction);
                 }
             }
         }
@@ -83,6 +89,15 @@ public class mousetouch: MonoBehaviour {
     {
         Debug.Log("Played fourth note");
 
+    }
+
+
+    public void moveCamPos(float x, float y, float z)
+    {
+        Debug.Log("Null not here");
+        Vector3 cameraPosition = new Vector3(x, y, z);
+        sceneCam.transform.position = cameraPosition;
+            //Vector3.Lerp(transform.position, cameraPosition, strength);
     }
 
 
