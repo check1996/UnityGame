@@ -23,7 +23,7 @@ RenderSettings:
   m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
-  m_AmbientIntensity: 3.06
+  m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 2100000, guid: 18bffe78a10db4d4f891858332b9044b, type: 2}
@@ -33,7 +33,7 @@ RenderSettings:
   m_HaloTexture: {fileID: 0}
   m_SpotCookie: {fileID: 10001, guid: 0000000000000000e000000000000000, type: 0}
   m_DefaultReflectionMode: 0
-  m_DefaultReflectionResolution: 1024
+  m_DefaultReflectionResolution: 128
   m_ReflectionBounces: 1
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
@@ -50,14 +50,14 @@ LightmapSettings:
     m_IndirectOutputScale: 1
     m_AlbedoBoost: 1
     m_TemporalCoherenceThreshold: 1
-    m_EnvironmentLightingMode: 1
+    m_EnvironmentLightingMode: 0
     m_EnableBakedLightmaps: 1
     m_EnableRealtimeLightmaps: 1
   m_LightmapEditorSettings:
     serializedVersion: 9
     m_Resolution: 2
     m_BakeResolution: 40
-    m_TextureWidth: 512
+    m_TextureWidth: 1024
     m_TextureHeight: 1024
     m_AO: 0
     m_AOMaxDistance: 1
@@ -65,7 +65,7 @@ LightmapSettings:
     m_CompAOExponentDirect: 0
     m_Padding: 2
     m_LightmapParameters: {fileID: 0}
-    m_LightmapsBakeMode: 0
+    m_LightmapsBakeMode: 1
     m_TextureCompression: 1
     m_FinalGather: 0
     m_FinalGatherFiltering: 1
@@ -89,8 +89,7 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaIndirect: 2
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ShowResolutionOverlay: 1
-  m_LightingDataAsset: {fileID: 112000002, guid: 01b8f880183d0644b95116a62e41b2dd,
-    type: 2}
+  m_LightingDataAsset: {fileID: 0}
   m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
@@ -1051,15 +1050,12 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 770627962}
-  m_LocalRotation: {x: 0.58025485, y: -0.20691456, z: 0.15547878, w: 0.7722157}
-  m_LocalPosition: {x: 0.3, y: 8, z: -4.8}
+  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
+  m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
-<<<<<<< HEAD
-  m_LocalEulerAnglesHint: {x: 73.844, y: -30.000002, z: 0}
-=======
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &798791308
 GameObject:
@@ -1149,7 +1145,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 798791308}
->>>>>>> 0eed1acb987ba0f3dfa5dc020243093d3fce524a
 --- !u!1 &951547370
 GameObject:
   m_ObjectHideFlags: 0
@@ -1201,11 +1196,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-<<<<<<< HEAD
-  field of view: 67.5
-=======
   field of view: 89.5
->>>>>>> 0eed1acb987ba0f3dfa5dc020243093d3fce524a
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -1229,23 +1220,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 951547370}
-<<<<<<< HEAD
-  m_LocalRotation: {x: -0.034178354, y: -0.11021428, z: 0.02780544, w: -0.9929308}
-  m_LocalPosition: {x: -5.8, y: 4.2, z: -20.9}
-=======
   m_LocalRotation: {x: 0.2578118, y: -0, z: -0, w: 0.96619517}
   m_LocalPosition: {x: 0, y: 3, z: -17.9}
->>>>>>> 0eed1acb987ba0f3dfa5dc020243093d3fce524a
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 728736660}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-<<<<<<< HEAD
-  m_LocalEulerAnglesHint: {x: 4.2440004, y: 12.566001, z: -362.741}
-=======
   m_LocalEulerAnglesHint: {x: 29.881, y: 0, z: 0}
->>>>>>> 0eed1acb987ba0f3dfa5dc020243093d3fce524a
 --- !u!114 &951547375
 MonoBehaviour:
   m_ObjectHideFlags: 0
