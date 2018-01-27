@@ -2,16 +2,27 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class mousetouch: MonoBehaviour {
 
-    //private TestModalWindow tester;
-    //private GameObject world;
+    private ModalPanel modalPanel;
+    private UnityAction myYesAction;
+    private UnityAction myNoAction;
+    private UnityAction myCancelAction;
+    private UnityAction myLastAction;
 
+   
     void Start()
     {
-       // world = 
-        //tester = new TestModalWindow();
+        modalPanel = ModalPanel.Instance();
+
+        myYesAction = new UnityAction(playNote1);
+        myNoAction = new UnityAction(playNote2);
+        myCancelAction = new UnityAction(playNote3);
+        myLastAction = new UnityAction(playNote4);
+
     }
 
     // Update is called once per frame
@@ -23,10 +34,9 @@ public class mousetouch: MonoBehaviour {
             RaycastHit hit;
             if (Physics.Raycast(ray, out hit))
             {
-                //Select Stage
                 if (hit.transform.name == "Water")
                 {
-                    //tester.TestYNCL();
+                    modalPanel.Choice("Flavor text", myYesAction, myNoAction, myCancelAction, myLastAction);
                     Debug.Log("yeah yeah yeah");
                 }
                 if (hit.transform.name == "Wood")
@@ -53,4 +63,27 @@ public class mousetouch: MonoBehaviour {
         }
 
     }
+
+    //Move to seperate class
+    public void playNote1()
+    {
+        Debug.Log("Played first note");
+    }
+    public void playNote2()
+    {
+        Debug.Log("Played second note");
+
+    }
+    public void playNote3()
+    {
+        Debug.Log("Played third note");
+
+    }
+    public void playNote4()
+    {
+        Debug.Log("Played fourth note");
+
+    }
+
+
 }
