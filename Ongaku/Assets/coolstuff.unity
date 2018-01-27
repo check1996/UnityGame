@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.07801952, g: 0.0723863, b: 0.06382022, a: 1}
+  m_IndirectSpecularColor: {r: 0.07792782, g: 0.07218482, b: 0.06368487, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -567,12 +567,12 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 464515080}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &464515082
 MonoBehaviour:
@@ -938,7 +938,7 @@ Transform:
   - {fileID: 1310892174}
   - {fileID: 1748925644}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 29.881, y: 0, z: 0}
 --- !u!114 &951547375
 MonoBehaviour:
@@ -951,6 +951,91 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c78892866b7b7fb47abf4b059c9b81e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sound1: {fileID: 8300000, guid: fc2db9cfe499a114389549ef23f0cba3, type: 3}
+  sound2: {fileID: 8300000, guid: 6be26f92341037246953543c4e3d8c82, type: 3}
+  sound3: {fileID: 8300000, guid: 7a98dec5ea2bddf469581db579994aa0, type: 3}
+  sound4: {fileID: 8300000, guid: a8fa2e21bd7e5ed4fa0d636a8d11dfef, type: 3}
+  sound5: {fileID: 8300000, guid: 8471adc44d63ec949a8b84ef03dc3d46, type: 3}
+  sound6: {fileID: 8300000, guid: 5b2589d247f464144929e498264a92fa, type: 3}
+  sound7: {fileID: 8300000, guid: 4038cdc33ae83fe4ab6b3182fad15f68, type: 3}
+  sound8: {fileID: 8300000, guid: 28df87a45ef961f4dadb78983815e591, type: 3}
+  sound9: {fileID: 8300000, guid: 626702a7a2a732b4dabf5e4fb147f6a3, type: 3}
+  sound10: {fileID: 8300000, guid: a685cd4b87f0a62448f83e9fc4fdf671, type: 3}
+  sound11: {fileID: 8300000, guid: c6f0e4768442bb04682ac5b62d627fa5, type: 3}
+  sound12: {fileID: 8300000, guid: bb75af96505c630488289431fe49856d, type: 3}
+  sound13: {fileID: 8300000, guid: 6d575d8bffdef384fbf5ede648aa4b55, type: 3}
+  sound14: {fileID: 8300000, guid: fbc0ed044383cb841acc096954e5fd07, type: 3}
+  sound15: {fileID: 8300000, guid: 43fca34344ed5de4499c9f79f9e648a0, type: 3}
+  sound16: {fileID: 8300000, guid: 0b3f5f0da2ef8ac4fa974fc8e6cb6ab1, type: 3}
+  sound17: {fileID: 8300000, guid: 01bc23eaada62d64a858cdf52c0a3ffd, type: 3}
+  sound18: {fileID: 8300000, guid: 5a843c3cdf454cc4b9db7c069a91832f, type: 3}
+  sound19: {fileID: 8300000, guid: c54055cdff810fc45aff6d493e1e2573, type: 3}
+  sound20: {fileID: 8300000, guid: 8db8fe9715b1c1143b11e2a6928fb1e6, type: 3}
+  sound21: {fileID: 8300000, guid: 0d45af0f3b9def247a4ed2d2123dc044, type: 3}
+  sound22: {fileID: 8300000, guid: 935555c3fc0031a48a0cb96fc3f819ae, type: 3}
+  sound23: {fileID: 8300000, guid: f7c8d3130f6f20c4d9b2f321c59c5abd, type: 3}
+  sound24: {fileID: 8300000, guid: ba9b47e92aaf36a48ac930b6afb7f1bf, type: 3}
+  sound25: {fileID: 8300000, guid: 4f8e7a4a769b6284d83e8f6d10483417, type: 3}
+  sound26: {fileID: 8300000, guid: b94c16d02fc59d54bb842c38fcc9144e, type: 3}
+  sound27: {fileID: 8300000, guid: 41a95b9e3d442f947918115e75a5d04c, type: 3}
+  sound28: {fileID: 8300000, guid: 7aeab3dc36296ac44b76541c6585fdad, type: 3}
+  sound29: {fileID: 8300000, guid: 7661264e160df9b469239cea95b17f58, type: 3}
+  sound30: {fileID: 0}
+  sound31: {fileID: 0}
+  sound32: {fileID: 0}
+  sound33: {fileID: 0}
+  sound34: {fileID: 0}
+  sound35: {fileID: 0}
+  sound36: {fileID: 0}
+  sound37: {fileID: 0}
+  sound38: {fileID: 0}
+  sound39: {fileID: 0}
+  sound40: {fileID: 0}
+  sound41: {fileID: 0}
+  sound42: {fileID: 0}
+  sound43: {fileID: 0}
+  sound44: {fileID: 0}
+  sound45: {fileID: 0}
+  sound46: {fileID: 0}
+  sound47: {fileID: 0}
+  sound48: {fileID: 0}
+  sound49: {fileID: 0}
+  sound50: {fileID: 0}
+  sound51: {fileID: 0}
+  sound52: {fileID: 0}
+  sound53: {fileID: 0}
+  sound54: {fileID: 0}
+  sound55: {fileID: 0}
+  sound56: {fileID: 0}
+  sound57: {fileID: 0}
+  sound58: {fileID: 0}
+  sound59: {fileID: 0}
+  sound60: {fileID: 0}
+  sound61: {fileID: 0}
+  sound62: {fileID: 0}
+  sound63: {fileID: 0}
+  sound64: {fileID: 0}
+  sound65: {fileID: 0}
+  sound66: {fileID: 0}
+  sound67: {fileID: 0}
+  sound68: {fileID: 0}
+  sound69: {fileID: 0}
+  sound70: {fileID: 0}
+  sound71: {fileID: 0}
+  sound72: {fileID: 0}
+  sound73: {fileID: 0}
+  sound74: {fileID: 0}
+  sound75: {fileID: 0}
+  sound76: {fileID: 0}
+  sound77: {fileID: 0}
+  sound78: {fileID: 0}
+  sound79: {fileID: 0}
+  sound80: {fileID: 0}
+  water: []
+  wood: []
+  iron: []
+  earth: []
+  fire: []
 --- !u!1 &994146549
 GameObject:
   m_ObjectHideFlags: 0
@@ -1244,6 +1329,91 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c78892866b7b7fb47abf4b059c9b81e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sound1: {fileID: 0}
+  sound2: {fileID: 0}
+  sound3: {fileID: 0}
+  sound4: {fileID: 0}
+  sound5: {fileID: 0}
+  sound6: {fileID: 0}
+  sound7: {fileID: 0}
+  sound8: {fileID: 0}
+  sound9: {fileID: 0}
+  sound10: {fileID: 0}
+  sound11: {fileID: 0}
+  sound12: {fileID: 0}
+  sound13: {fileID: 0}
+  sound14: {fileID: 0}
+  sound15: {fileID: 0}
+  sound16: {fileID: 0}
+  sound17: {fileID: 0}
+  sound18: {fileID: 0}
+  sound19: {fileID: 0}
+  sound20: {fileID: 0}
+  sound21: {fileID: 0}
+  sound22: {fileID: 0}
+  sound23: {fileID: 0}
+  sound24: {fileID: 0}
+  sound25: {fileID: 0}
+  sound26: {fileID: 0}
+  sound27: {fileID: 0}
+  sound28: {fileID: 0}
+  sound29: {fileID: 0}
+  sound30: {fileID: 0}
+  sound31: {fileID: 0}
+  sound32: {fileID: 0}
+  sound33: {fileID: 0}
+  sound34: {fileID: 0}
+  sound35: {fileID: 0}
+  sound36: {fileID: 0}
+  sound37: {fileID: 0}
+  sound38: {fileID: 0}
+  sound39: {fileID: 0}
+  sound40: {fileID: 0}
+  sound41: {fileID: 0}
+  sound42: {fileID: 0}
+  sound43: {fileID: 0}
+  sound44: {fileID: 0}
+  sound45: {fileID: 0}
+  sound46: {fileID: 0}
+  sound47: {fileID: 0}
+  sound48: {fileID: 0}
+  sound49: {fileID: 0}
+  sound50: {fileID: 0}
+  sound51: {fileID: 0}
+  sound52: {fileID: 0}
+  sound53: {fileID: 0}
+  sound54: {fileID: 0}
+  sound55: {fileID: 0}
+  sound56: {fileID: 0}
+  sound57: {fileID: 0}
+  sound58: {fileID: 0}
+  sound59: {fileID: 0}
+  sound60: {fileID: 0}
+  sound61: {fileID: 0}
+  sound62: {fileID: 0}
+  sound63: {fileID: 0}
+  sound64: {fileID: 0}
+  sound65: {fileID: 0}
+  sound66: {fileID: 0}
+  sound67: {fileID: 0}
+  sound68: {fileID: 0}
+  sound69: {fileID: 0}
+  sound70: {fileID: 0}
+  sound71: {fileID: 0}
+  sound72: {fileID: 0}
+  sound73: {fileID: 0}
+  sound74: {fileID: 0}
+  sound75: {fileID: 0}
+  sound76: {fileID: 0}
+  sound77: {fileID: 0}
+  sound78: {fileID: 0}
+  sound79: {fileID: 0}
+  sound80: {fileID: 0}
+  water: []
+  wood: []
+  iron: []
+  earth: []
+  fire: []
 --- !u!135 &1050360766
 SphereCollider:
   m_ObjectHideFlags: 0
