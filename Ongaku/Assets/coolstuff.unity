@@ -603,9 +603,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 638bbb168c1e7ab46a2b5e32b71abc45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  displayText: {fileID: 0}
-  displayTime: 1.5
-  fadeTime: 1
 --- !u!1 &505635443
 GameObject:
   m_ObjectHideFlags: 0
@@ -865,6 +862,7 @@ GameObject:
   - component: {fileID: 951547372}
   - component: {fileID: 951547371}
   - component: {fileID: 951547375}
+  - component: {fileID: 951547376}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1036,6 +1034,87 @@ MonoBehaviour:
   iron: []
   earth: []
   fire: []
+  strength: 0.5
+--- !u!82 &951547376
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 951547370}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 3e6528cd01c5a1642bef19954adfe382, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 1
+  BypassListenerEffects: 1
+  BypassReverbZones: 1
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!1 &994146549
 GameObject:
   m_ObjectHideFlags: 0
@@ -1253,7 +1332,6 @@ GameObject:
   - component: {fileID: 1050360762}
   - component: {fileID: 1050360764}
   - component: {fileID: 1050360763}
-  - component: {fileID: 1050360765}
   - component: {fileID: 1050360766}
   m_Layer: 0
   m_Name: Wood
@@ -1318,102 +1396,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1050360761}
   m_Mesh: {fileID: 4300004, guid: 5520e509ad081e64a9778bb7a2ee0432, type: 3}
---- !u!114 &1050360765
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1050360761}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c78892866b7b7fb47abf4b059c9b81e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sound1: {fileID: 0}
-  sound2: {fileID: 0}
-  sound3: {fileID: 0}
-  sound4: {fileID: 0}
-  sound5: {fileID: 0}
-  sound6: {fileID: 0}
-  sound7: {fileID: 0}
-  sound8: {fileID: 0}
-  sound9: {fileID: 0}
-  sound10: {fileID: 0}
-  sound11: {fileID: 0}
-  sound12: {fileID: 0}
-  sound13: {fileID: 0}
-  sound14: {fileID: 0}
-  sound15: {fileID: 0}
-  sound16: {fileID: 0}
-  sound17: {fileID: 0}
-  sound18: {fileID: 0}
-  sound19: {fileID: 0}
-  sound20: {fileID: 0}
-  sound21: {fileID: 0}
-  sound22: {fileID: 0}
-  sound23: {fileID: 0}
-  sound24: {fileID: 0}
-  sound25: {fileID: 0}
-  sound26: {fileID: 0}
-  sound27: {fileID: 0}
-  sound28: {fileID: 0}
-  sound29: {fileID: 0}
-  sound30: {fileID: 0}
-  sound31: {fileID: 0}
-  sound32: {fileID: 0}
-  sound33: {fileID: 0}
-  sound34: {fileID: 0}
-  sound35: {fileID: 0}
-  sound36: {fileID: 0}
-  sound37: {fileID: 0}
-  sound38: {fileID: 0}
-  sound39: {fileID: 0}
-  sound40: {fileID: 0}
-  sound41: {fileID: 0}
-  sound42: {fileID: 0}
-  sound43: {fileID: 0}
-  sound44: {fileID: 0}
-  sound45: {fileID: 0}
-  sound46: {fileID: 0}
-  sound47: {fileID: 0}
-  sound48: {fileID: 0}
-  sound49: {fileID: 0}
-  sound50: {fileID: 0}
-  sound51: {fileID: 0}
-  sound52: {fileID: 0}
-  sound53: {fileID: 0}
-  sound54: {fileID: 0}
-  sound55: {fileID: 0}
-  sound56: {fileID: 0}
-  sound57: {fileID: 0}
-  sound58: {fileID: 0}
-  sound59: {fileID: 0}
-  sound60: {fileID: 0}
-  sound61: {fileID: 0}
-  sound62: {fileID: 0}
-  sound63: {fileID: 0}
-  sound64: {fileID: 0}
-  sound65: {fileID: 0}
-  sound66: {fileID: 0}
-  sound67: {fileID: 0}
-  sound68: {fileID: 0}
-  sound69: {fileID: 0}
-  sound70: {fileID: 0}
-  sound71: {fileID: 0}
-  sound72: {fileID: 0}
-  sound73: {fileID: 0}
-  sound74: {fileID: 0}
-  sound75: {fileID: 0}
-  sound76: {fileID: 0}
-  sound77: {fileID: 0}
-  sound78: {fileID: 0}
-  sound79: {fileID: 0}
-  sound80: {fileID: 0}
-  water: []
-  wood: []
-  iron: []
-  earth: []
-  fire: []
 --- !u!135 &1050360766
 SphereCollider:
   m_ObjectHideFlags: 0

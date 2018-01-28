@@ -11,14 +11,7 @@ public class mousetouch: MonoBehaviour {
 
     private ModalPanel modalPanel;
 
-    private UnityAction waterYesAction;
-    private UnityAction waterNoAction;
-    private UnityAction waterCancelAction;
-    private UnityAction waterLastAction;
-    private UnityAction woodYesAction;
-    private UnityAction woodNoAction;
-    private UnityAction woodCancelAction;
-    private UnityAction woodLastAction;
+  
     public AudioClip sound1;
     public AudioClip sound2;
     public AudioClip sound3;
@@ -104,6 +97,26 @@ public class mousetouch: MonoBehaviour {
     public List<AudioClip> iron;
     public List<AudioClip> earth;
     public List<AudioClip> fire;
+    private UnityAction waterYesAction;
+    private UnityAction waterNoAction;
+    private UnityAction waterCancelAction;
+    private UnityAction waterLastAction;
+    private UnityAction woodYesAction;
+    private UnityAction woodNoAction;
+    private UnityAction woodCancelAction;
+    private UnityAction woodLastAction;
+    private UnityAction ironYesAction;
+    private UnityAction ironNoAction;
+    private UnityAction ironCancelAction;
+    private UnityAction ironLastAction;
+    private UnityAction earthYesAction;
+    private UnityAction earthNoAction;
+    private UnityAction earthCancelAction;
+    private UnityAction earthLastAction;
+    private UnityAction fireYesAction;
+    private UnityAction fireNoAction;
+    private UnityAction fireCancelAction;
+    private UnityAction fireLastAction;
     private AudioClip watersound1;
     private AudioClip watersound2;
     private AudioClip watersound3;
@@ -112,6 +125,18 @@ public class mousetouch: MonoBehaviour {
     private AudioClip woodsound2;
     private AudioClip woodsound3;
     private AudioClip woodsound4;
+    private AudioClip ironsound1;
+    private AudioClip ironsound2;
+    private AudioClip ironsound3;
+    private AudioClip ironsound4;
+    private AudioClip earthsound1;
+    private AudioClip earthsound2;
+    private AudioClip earthsound3;
+    private AudioClip earthsound4;
+    private AudioClip firesound1;
+    private AudioClip firesound2;
+    private AudioClip firesound3;
+    private AudioClip firesound4;
     private AudioSource source { get { return GetComponent<AudioSource>(); } }
 
 
@@ -141,6 +166,16 @@ public class mousetouch: MonoBehaviour {
         //wood
         woodsoundpicker();
         woodactioncreated();
+        //iron
+        ironsoundpicker();
+        ironactioncreated();
+        //earth
+        earthsoundpicker();
+        earthactioncreated();
+        //fire
+        firesoundpicker();
+        fireactioncreated();
+
         gameObject.AddComponent<AudioSource>();
         //source.playOnAwake = false;
 
@@ -172,17 +207,17 @@ public class mousetouch: MonoBehaviour {
                 if (hit.transform.name == "Iron")
                 {
                     moveCamPos(-1, 1, 6);
-                    //modalPanel.Choice("Flavor text", myYesAction, myNoAction, myCancelAction, myLastAction);
+                    modalPanel.Choice("Flavor text", ironYesAction, ironNoAction, ironCancelAction, ironLastAction);
                 }
                 if (hit.transform.name == "Earth")
                 {
                     moveCamPos(-7, 1, -4);
-                    // modalPanel.Choice("Flavor text", myYesAction, myNoAction, myCancelAction, myLastAction);
+                    modalPanel.Choice("Flavor text", earthYesAction, earthNoAction, earthCancelAction, earthLastAction);
                 }
                 if (hit.transform.name == "Fire")
                 {
                     moveCamPos(7, 1, 6);
-                    // modalPanel.Choice("Flavor text", myYesAction, myNoAction, myCancelAction, myLastAction);
+                    modalPanel.Choice("Flavor text", fireYesAction, fireNoAction, fireCancelAction, fireLastAction);
                 }
             }
         }
@@ -314,8 +349,6 @@ public class mousetouch: MonoBehaviour {
             }
         }
 
-
-
     }
     public void woodactioncreated()
     {
@@ -324,7 +357,208 @@ public class mousetouch: MonoBehaviour {
         woodCancelAction = new UnityAction(woodplayNote3);
         woodLastAction = new UnityAction(woodplayNote4);
     }
+    //wood end
 
+    //iron part
+    public void ironplayNote1()
+    {
+        source.PlayOneShot(ironsound1);
+    }
+    public void ironplayNote2()
+    {
+        source.PlayOneShot(ironsound2);
+
+    }
+    public void ironplayNote3()
+    {
+        source.PlayOneShot(ironsound3);
+
+    }
+    public void ironplayNote4()
+    {
+        source.PlayOneShot(ironsound4);
+
+    }
+    public void ironsoundpicker()
+    {
+        int counter = 0;
+        int number = 0;
+        System.Random random = new System.Random();
+        while (counter < 4)
+        {
+            if (counter == 0)
+            {
+                number = random.Next(0, iron.Count);
+                ironsound1 = iron[number];
+                iron.RemoveAt(number);
+                counter++;
+            }
+            if (counter == 1)
+            {
+                number = random.Next(0, iron.Count);
+                ironsound2 = iron[number];
+                iron.RemoveAt(number);
+                counter++;
+            }
+            if (counter == 2)
+            {
+                number = random.Next(0, iron.Count);
+                ironsound3 = iron[number];
+                iron.RemoveAt(number);
+                counter++;
+            }
+            if (counter == 3)
+            {
+                number = random.Next(0, iron.Count);
+                ironsound4 = iron[number];
+                iron.RemoveAt(number);
+                counter++;
+            }
+        }
+
+    }
+    public void ironactioncreated()
+    {
+        ironYesAction = new UnityAction(ironplayNote1);
+        ironNoAction = new UnityAction(ironplayNote2);
+        ironCancelAction = new UnityAction(ironplayNote3);
+        ironLastAction = new UnityAction(ironplayNote4);
+    }
+    // iron end
+
+    //earth part
+    public void earthplayNote1()
+    {
+        source.PlayOneShot(earthsound1);
+    }
+    public void earthplayNote2()
+    {
+        source.PlayOneShot(earthsound2);
+
+    }
+    public void earthplayNote3()
+    {
+        source.PlayOneShot(earthsound3);
+
+    }
+    public void earthplayNote4()
+    {
+        source.PlayOneShot(earthsound4);
+
+    }
+    public void earthsoundpicker()
+    {
+        int counter = 0;
+        int number = 0;
+        System.Random random = new System.Random();
+        while (counter < 4)
+        {
+            if (counter == 0)
+            {
+                number = random.Next(0, earth.Count);
+                earthsound1 = earth[number];
+                earth.RemoveAt(number);
+                counter++;
+            }
+            if (counter == 1)
+            {
+                number = random.Next(0, earth.Count);
+                earthsound2 = earth[number];
+                earth.RemoveAt(number);
+                counter++;
+            }
+            if (counter == 2)
+            {
+                number = random.Next(0, earth.Count);
+                earthsound3 = earth[number];
+                earth.RemoveAt(number);
+                counter++;
+            }
+            if (counter == 3)
+            {
+                number = random.Next(0, earth.Count);
+                earthsound4 = earth[number];
+                earth.RemoveAt(number);
+                counter++;
+            }
+        }
+
+    }
+    public void earthactioncreated()
+    {
+        earthYesAction = new UnityAction(earthplayNote1);
+        earthNoAction = new UnityAction(earthplayNote2);
+        earthCancelAction = new UnityAction(earthplayNote3);
+        earthLastAction = new UnityAction(earthplayNote4);
+    }
+    // earth end
+
+    // fire part 
+    public void fireplayNote1()
+    {
+        source.PlayOneShot(firesound1);
+    }
+    public void fireplayNote2()
+    {
+        source.PlayOneShot(firesound2);
+
+    }
+    public void fireplayNote3()
+    {
+        source.PlayOneShot(firesound3);
+
+    }
+    public void fireplayNote4()
+    {
+        source.PlayOneShot(firesound4);
+
+    }
+    public void firesoundpicker()
+    {
+        int counter = 0;
+        int number = 0;
+        System.Random random = new System.Random();
+        while (counter < 4)
+        {
+            if (counter == 0)
+            {
+                number = random.Next(0, fire.Count);
+                firesound1 = fire[number];
+                fire.RemoveAt(number);
+                counter++;
+            }
+            if (counter == 1)
+            {
+                number = random.Next(0, fire.Count);
+                firesound2 = fire[number];
+                fire.RemoveAt(number);
+                counter++;
+            }
+            if (counter == 2)
+            {
+                number = random.Next(0, fire.Count);
+                firesound3 = fire[number];
+                fire.RemoveAt(number);
+                counter++;
+            }
+            if (counter == 3)
+            {
+                number = random.Next(0, fire.Count);
+                firesound4 = fire[number];
+                fire.RemoveAt(number);
+                counter++;
+            }
+        }
+
+    }
+    public void fireactioncreated()
+    {
+        fireYesAction = new UnityAction(fireplayNote1);
+        fireNoAction = new UnityAction(fireplayNote2);
+        fireCancelAction = new UnityAction(fireplayNote3);
+        fireLastAction = new UnityAction(fireplayNote4);
+    }
+     // fire end
     public void moveCamPos(float x, float y, float z)
     {
         Debug.Log("Null not here");
